@@ -1,0 +1,43 @@
+$range: 1000;
+
+@for $i from 0 through $range {
+    .w-#{$i}-px {
+        width: #{$i}px !important;
+    }
+}
+
+@for $i from 0 through $range {
+    .min-w-#{$i}-px {
+        min-width: #{$i}px !important;
+    }
+}
+
+@for $i from 0 through $range {
+    .max-w-#{$i}-px {
+        max-width: #{$i}px !important;
+    }
+}
+
+@for $i from 0 through $range {
+    .h-#{$i}-px {
+        height: #{$i}px !important;
+    }
+}
+
+@for $i from 0 through $range {
+    .min-h-#{$i}-px {
+        min-height: #{$i}px !important;
+    }
+}
+
+@for $i from 0 through $range {
+    .max-h-#{$i}-px {
+        max-height: #{$i}px !important;
+    }
+}
+
+@for $i from 0 through 2000 {
+    .z-index-#{$i} {
+        z-index: #{$i} !important;
+    }
+}

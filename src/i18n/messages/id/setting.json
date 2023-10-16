@@ -1,0 +1,15 @@
+{
+    "reset-default": "Atur ke semula",
+    "display-inline": "Di Baris",
+    "display-tooltip": "Tooltip",
+    "display": "Menampilkan",
+    "translation": "Terjemahan",
+    "theme": {
+        "auto": "Otomatis",
+        "dark": "Gelap",
+        "light": "Terang",
+        "message": {
+            "auto": "Sistem akan otomatis mebaca mode gelap atau terang pada perangkat anda."
+        }
+    }
+}

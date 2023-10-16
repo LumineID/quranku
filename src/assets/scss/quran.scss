@@ -1,0 +1,377 @@
+@import "animate.css";
+@import "vue3-toastify/dist/index.css";
+
+@import "~bootstrap/scss/mixins/banner";
+@include bsBanner("");
+
+
+// scss-docs-start import-stack
+// Configuration
+@import "~bootstrap/scss/functions";
+@import "variables";
+@import "~bootstrap/scss/variables-dark";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+// Layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/offcanvas";
+@import "~bootstrap/scss/placeholders";
+
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
+
+@import "position";
+@import "size";
+@import "font";
+@import "heading";
+@import "font-size";
+@import "color";
+@import "transition";
+@import "sidebar";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --popper-theme-background-color: #fff;
+    --popper-theme-background-color-hover: #fff;
+    --popper-theme-text-color: #000;
+    --popper-theme-border-width: 0px;
+    --popper-theme-border-style: solid;
+    --popper-theme-border-radius: 6px;
+    --popper-theme-padding: 10px;
+    --popper-theme-box-shadow: 0 6px 30px -6px rgba(0, 0, 0, 0.25);
+}
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.no-scroll {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.dropdown .dropdown-item {
+    &.no-action {
+
+        &:hover,
+        &:active {
+            background-color: transparent;
+            color: default;
+        }
+    }
+
+    &:not(.no-action) {
+        cursor: pointer;
+    }
+}
+
+.list-group .list-group-item.list-group-item-action {
+    cursor: pointer;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+hr {
+    border-top: 4px solid $black;
+    border-radius: 0.2rem;
+}
+
+hr.primary {
+    border-top: 4px solid $primary !important;
+}
+
+.nav.nav-pills.custom-nav-pills {
+    padding: 5px;
+    margin: 0;
+    border-radius: .2rem;
+    background-color: $light;
+    flex-direction: row;
+
+    .nav-link {
+        padding: 2px;
+        border-radius: .2rem;
+        text-align: center;
+        flex: 1 1 auto;
+
+        &:not(.disabled) {
+            cursor: pointer;
+        }
+    }
+}
+.btn:active,
+.btn:hover {
+    outline: none !important;
+}
+.btn.btn-primary {
+    color: $white;
+    &:disabled,
+    &.disabled {
+        color: $light;
+    }
+    &:active {
+        color: rgba($light, .8);
+    }
+}
+.btn.btn-outline-primary {
+    &:hover {
+        color: $white;
+    }
+}
+
+.btn.btn-default {
+    background-color: $light;
+    &:disabled,
+    &.disabled,
+    &:hover,
+    &:active {
+        border-color: $light;
+    }
+    &:hover {
+        background-color: rgba($light, .3);
+    }
+    &:active {
+        background-color: rgba($light, .1);
+    }
+}
+.btn.btn-outline-default {
+    background-color: transparent;
+    &:disabled,
+    &.disabled,
+    &:active {
+        background-color: transparent;
+        border-color: transparent;
+    }
+    &:hover {
+        border-color: $light;
+        background-color: $light;
+    }
+}
+
+.btn.btn-transparent {
+    border-color: transparent;
+    &:active,
+    &:hover,
+    &.disabled {
+        border-color: transparent;
+    }
+}
+.btn:disabled,
+.btn.disabled {
+    cursor: not-allowed !important;
+    pointer-events: auto !important;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 12px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba($black, .3);
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: $light;
+    box-shadow: inset 0 0 10px rgba($black, .3);
+    border-radius: 12px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+body.custom-scrollbar::-webkit-scrollbar-track {
+    border-radius: 0px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin-bottom: 80px;
+    & :has(.audio-player.show.expand) {
+        margin-bottom: 230px;
+    }
+}
+
+.border-radius-0 {
+    border-radius: 0px !important;
+}
+
+.overflow-y-scroll {
+    overflow-y: scroll !important;
+}
+.overflow-y-hide {
+    overflow-y: hide !important;
+}
+.overflow-y-auto {
+    overflow-y: hide !important;
+}
+.overflow-x-scroll {
+    overflow-x: scroll !important;
+}
+.overflow-x-hide {
+    overflow-x: hide !important;
+}
+.overflow-x-auto {
+    overflow-x: hide !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.tafsir-text-wrapper {
+    .arabic.uthmani {
+        font-size: 25px;
+        margin-bottom: .5rem;
+        cursor: pointer;
+        font-family: 'Uthmanic Hafs' !important;
+        text-align: right;
+        direction: rtl;
+    }
+}
+
+.dp__main {
+    &.dp__theme_dark {
+        .dp__input {
+            background-color: $body-bg-dark;
+        }
+    }
+}
+
+.dp__menu {
+    .dp__overlay_cell_active,
+    .dp__active_date {
+        background-color: $primary;
+    }
+
+    &.dp__theme_dark {
+        .dp__overlay_container,
+        .dp__instance_calendar,
+        .dp__action_row,
+        .dp__overlay_action {
+            background-color: $body-bg-dark;
+        }
+        .dp__action_button {
+            &.dp__action_cancel {
+                border: 1px solid $gray-700;
+            }
+        }
+        .dp__calendar_header {
+            border-bottom: 1px solid $gray-700;
+        }
+    }
+
+    .dp__action_button {
+        &.dp__action_cancel,
+        &.dp__action_select {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            &:hover {
+                border: 1px solid $primary;
+            }
+        }
+        &.dp__action_select {
+            background-color: $primary;
+        }
+    }
+
+    .dp__menu_inner,
+    .dp__action_row,
+    .dp__overlay {
+        border: 1px solid $card-border-color;
+    }
+}
+
+// html:not([data-bs-theme=dark]) {
+//     svg.svg-inline--fa {
+//         color: $gray-700;
+//     }
+// }
+html:not([data-bs-theme=dark]) {
+    body {
+        background-color: $white;
+    }
+}
+
+html[data-bs-theme=dark] {
+    .nav.nav-pills.custom-nav-pills {
+        background-color: $body-secondary-bg-dark !important;
+    }
+
+    hr {
+        border-top: 4px solid $white;
+    }
+
+    .btn.btn-default {
+        background-color: $body-secondary-bg-dark;
+        &:disabled,
+        &.disabled,
+        &:hover,
+        &:active {
+            border-color: $body-secondary-bg-dark;
+        }
+        &:hover {
+            background-color: rgba($body-secondary-bg-dark, .9);
+        }
+        &:active {
+            background-color: rgba($body-secondary-bg-dark, .7);
+        }
+    }
+
+    .btn.btn-outline-default {
+        &:hover {
+            border-color: $body-secondary-bg-dark;
+            background-color: $body-secondary-bg-dark;
+        }
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background-color: $body-secondary-bg-dark;
+    }
+}

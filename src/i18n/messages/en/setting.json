@@ -1,0 +1,15 @@
+{
+    "reset-default": "Reset to default",
+    "display-inline": "In-line",
+    "display-tooltip": "Tooltip",
+    "display": "Display",
+    "translation": "Translation",
+    "theme": {
+        "auto": "System",
+        "dark": "Dark",
+        "light": "Light",
+        "message": {
+            "auto": "The system will automatically read the dark or light mode on your device."
+        }
+    }
+}

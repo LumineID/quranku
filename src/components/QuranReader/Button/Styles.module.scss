@@ -1,0 +1,16 @@
+.button {
+    &:hover,
+    &:active {
+        background-color: rgba($primary, .5) !important;
+        .icon {
+            color: $white;
+        }
+    }
+
+    display: flex;
+    align-items: center;
+
+    .icon {
+        font-size: 20px;
+    }
+}

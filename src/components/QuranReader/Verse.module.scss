@@ -1,0 +1,21 @@
+.verse_container {
+    width: 100%;
+    &.highlight {
+        .arabic_text_wrapper {
+            color: $primary !important;
+        }
+    }
+}
+
+.icon_spin {
+    animation: rotation 5s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

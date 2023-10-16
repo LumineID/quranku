@@ -1,0 +1,27 @@
+$range: 500;
+
+
+@for $i from 0 through $range {
+    .top-#{$i}-px {
+        top: #{$i}px;
+    }
+}
+
+@for $i from 0 through $range {
+    .bottom-#{$i}-px {
+        bottom: #{$i}px;
+    }
+}
+
+@for $i from 0 through $range {
+    .start-#{$i}-px {
+        left: #{$i}px;
+    }
+}
+
+
+@for $i from 0 through $range {
+    .end-#{$i}-px {
+        right: #{$i}px;
+    }
+}

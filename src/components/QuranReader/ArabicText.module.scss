@@ -1,0 +1,30 @@
+.arabic_text {
+    &.highlight {
+        color: $primary;
+    }
+    &.hover {
+        .text_wrapper {
+            &:not([data-word-type=end]) {
+                background-color: rgba($primary, 0.15);
+            }
+            &:is([data-word-type=end]) {
+                color: $primary;
+            }
+        }
+    }
+    .text_wrapper {
+        cursor: pointer;
+        user-select: none;
+        display: inline-block;
+        transition: all .2s ease;
+        margin-bottom: .5rem;
+        padding: 5px;
+        &.highlight_word,
+        &:hover,
+        &:active {
+            color: $primary;
+            text-shadow: 1px 1.5px 5px;
+            transition: all .3s ease;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+$headings-margin-bottom:      ($spacer / 2);
+$headings-font-family:        inherit !default;
+$headings-font-weight:        $font-weight-bold !default;
+$headings-line-height:        1.5 !default;
+$headings-color:              $gray-800 !default;
+
+$heading-letter-spacing:      .025em !default;
+$heading-font-size:           .95rem !default;
+$heading-text-transform:      uppercase !default;
+$heading-font-weight:         $headings-font-weight !default;
+
+$heading-title-letter-spacing:      .025em !default;
+$heading-title-font-size:           1.375rem !default;
+$heading-title-font-weight:         $font-weight-bold !default;
+$heading-title-text-transform:      uppercase !default;
+
+$heading-section-letter-spacing:      .025em !default;
+$heading-section-font-size:           1.375rem !default;
+$heading-section-font-weight:         $font-weight-bold !default;
+$heading-section-text-transform:      uppercase !default;
+
+.heading {
+	letter-spacing: $heading-letter-spacing;
+	font-size: $heading-font-size;
+	text-transform: $heading-text-transform;
+	font-weight: $heading-font-weight;
+}
+
+
+// Heading variations
+
+.heading-small {
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+	font-size: .90rem;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+}
+
+.heading-title {
+	letter-spacing: $heading-title-letter-spacing;
+	font-size: $heading-title-font-size;
+	font-weight: $heading-title-font-weight;
+	text-transform: $heading-title-text-transform;
+}
+
+.heading-section {
+	letter-spacing: $heading-section-letter-spacing;
+	font-size: $heading-section-font-size;
+	font-weight: $heading-section-font-weight;
+	text-transform: $heading-section-text-transform;
+
+	img {
+		display: block;
+		width: 72px;
+		height: 72px;
+		margin-bottom: 1.5rem;
+	}
+
+	&.text-center {
+		img {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

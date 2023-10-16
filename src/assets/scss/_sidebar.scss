@@ -1,0 +1,99 @@
+.sidebar {
+    position: fixed;
+    width: 110px;
+    height: 100%;
+    left: 0;
+    z-index: 5;
+    background-color: $white;
+    border: 1px solid $card-border-color;
+    transition: all .4s ease;
+    padding: 20px 14px;
+    word-break: break-all;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &.close {
+        visibility: hidden;
+        left: -110px;
+    }
+    ul.sidebar-menu {
+        margin: 0;
+        padding: 0;
+        li.menu-link {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            transition: all .2s ease;
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+            &:not(.active):hover {
+                color: $primary;
+                .menu-link-icon {
+                    transform: scale(1.2);
+                    transition: all .3s ease;
+                }
+            }
+            &.active {
+                color: $primary;
+                .menu-link-text {
+                    font-weight: bold;
+                }
+            }
+            .menu-link-icon {
+                transition: all .5s ease;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    max-width: 100%;
+                    width: 40px;
+                }
+            }
+            .menu-link-text {
+                font-weight: 500;
+                margin-top: 10px;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+body {
+    .main-content {
+        transition: all .4s ease;
+        left: 0;
+        position: relative;
+        width: 100%;
+        overflow: hidden !important;
+    }
+    .navbar {
+        transition: all .4s ease !important;
+        left: 0;
+        width: 100%;
+        overflow: hidden !important;
+    }
+    &.sidebar-open .main-content {
+        left: 110px;
+        width: calc(100% - 110px);
+        overflow: hidden !important;
+    }
+    &.sidebar-open .navbar {
+        left: 110px;
+        width: calc(100% - 110px);
+        overflow: hidden !important;
+    }
+}
+
+html[data-bs-theme=dark] {
+    .sidebar {
+        background-color: $body-bg-dark;
+    }
+}

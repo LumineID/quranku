@@ -1,0 +1,189 @@
+.playlist_container {
+    position: relative;
+    top: 1.22px;
+    left: 15px;
+    max-width: 170px;
+    min-width: 170px;
+}
+.playlist_title {
+    position: absolute;
+    padding: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 38.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-weight: bold;
+    color: $primary;
+    background-color: $white;
+    border: 3px solid $primary;
+    border-bottom: none;
+    z-index: 95;
+}
+.playlist_button_toggle {
+    position: absolute;
+    top: -33.1px;
+    display: flex;
+    align-self: center;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    background-color: $white;
+    border: 3px solid $primary;
+    border-bottom-color: $white;
+    z-index: 100;
+    transition: .5s;
+}
+.playlist_button_toggle_icon {
+    top: -7px;
+    position: relative;
+    color: $primary;
+}
+.playlist_card {
+    position: absolute;
+    bottom: 29.8px;
+    max-height: 350px;
+    min-height: 350px;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    border-radius: 5px;
+    border: 3px solid $primary;
+    visibility: hidden;
+    overflow-x: auto;
+    transform: translateX(-100%);
+    transition: .1s;
+}
+.playlist_card_item {
+    &:not([data-name=header]) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+        border-radius: 0px;
+        cursor: pointer;
+        &:hover {
+            background-color: rgba($primary, .4);
+            color: $white;
+        }
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+        &.playlist_card_item_active {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    &:is([data-name=header]) {
+        padding: 1rem;
+        border-bottom: 3px solid $primary;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+.playlist_action {
+    position: absolute;
+    bottom: 29.8px;
+    max-height: 350px;
+    min-height: 350px;
+    width: 50px;
+    background-color: transparent;
+    right: -60px;
+    visibility: hidden;
+    transform: translateX(-100%);
+    color: $primary;
+    overflow-x: auto;
+}
+.playlist_action_button {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background-color: $white;
+    border: 3px solid $primary;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:not(:last-child) {
+        margin-bottom: .4rem;
+    }
+    &.action_button_active {
+        background-color: $primary;
+        color: $white;
+    }
+}
+.playlist_action_button_icon {
+    font-size: 20px;
+}
+.playlist_search {
+    position: absolute;
+    bottom: 390px;
+    width: 100%;
+    border: 3px solid $primary;
+    padding: .2rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    text-align: center;
+    border-radius: 5px;
+    background-color: $white;
+    color: $primary;
+    font-weight: bold;
+    visibility: hidden;
+    transform: translateX(-100%);
+    z-index: 90;
+    &:focus {
+        outline: none;
+    }
+}
+.playlist_container.show {
+    .playlist_button_toggle {
+        border-top-color: $white;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        transition: .5s;
+    }
+    .playlist_card,
+    .playlist_action,
+    .playlist_search {
+        visibility: visible;
+        transition: .5s;
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+.flex_center {
+    display: flex;
+    justify-content: center;
+}
+html[data-bs-theme=dark] {
+    .playlist_container {
+        .playlist_button_toggle,
+        .playlist_card,
+        .playlist_search,
+        .playlist_action_button:not(.action_button_active),
+        .playlist_title {
+            background-color: $dark;
+        }
+        .playlist_button_toggle {
+            border-bottom-color: $dark;
+        }
+        &.show {
+            .playlist_button_toggle {
+                border-top-color: $dark;
+            }
+        }
+    }
+}

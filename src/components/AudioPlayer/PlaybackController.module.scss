@@ -1,0 +1,51 @@
+.playback_control_button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    .control_button_icon {
+        font-size: 22px;
+    }
+    &:nth-child(3) {
+        width: 80px;
+        height: 80px;
+        .control_button_icon {
+            font-size: 40px;
+        }
+    }
+    &:not(:first-child) {
+        margin-left: 1.5rem;
+    }
+    &.disabled {
+        pointer-events: none;
+        color: var(--bs-secondary-color);
+        &.active {
+            color: rgba($primary, .5);
+        }
+    }
+    &:not(.control_button_disabled) {
+        cursor: pointer;
+        &:hover,
+        &:active {
+            background-color: rgba($primary, .5);
+            color: $white;
+        }
+        &:not(:last-child):active {
+            transform: scale(.8);
+            transition: .2s;
+        }
+        &.control_button_active {
+            color: $primary;
+        }
+    }
+}
+.slide_enter_active {
+    transition: all 0.2s ease-out;
+}
+
+.slide_enter {
+    transform: translateX(40px);
+    opacity: 0;
+}

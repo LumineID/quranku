@@ -1,0 +1,63 @@
+{
+    "name": "Quran Ku",
+    "short_name": "Quran Ku",
+    "description": "Quran ku adalah aplikasi Al-Qur`an online sumber terbuka. Baca dan dengarkan ayat-ayat Al-Qur`an",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "categories": ["books", "education"],
+    "icons": [
+        {
+            "src": "/assets/img/icon-16x16.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "/assets/img/icon-32x32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "/assets/img/icon-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/assets/img/icon-180x180.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "/assets/img/icon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Surah Al-Baqarah",
+            "url": "/surah/2",
+            "description": "Baca surah Al-Baqarah",
+            "icons": [{"src": "/assets/img/icon-512x512.png", "sizes": "512x512"}]
+        },
+        {
+            "name": "Surah Al-Kahf",
+            "url": "/surah/18",
+            "description": "Baca surah Al-Kahf",
+            "icons": [{"src": "/assets/img/icon-512x512.png", "sizes": "512x512"}]
+        },
+        {
+            "name": "Surah Yaseen",
+            "url": "/surah/36",
+            "description": "Baca surah Yaseen",
+            "icons": [{"src": "/assets/img/icon-512x512.png", "sizes": "512x512"}]
+        },
+        {
+            "name": "Surah Al-Mulk",
+            "url": "/surah/67",
+            "description": "Baca surah Al-Mulk",
+            "icons": [{"src": "/assets/img/icon-512x512.png", "sizes": "512x512"}]
+        }
+    ]
+}

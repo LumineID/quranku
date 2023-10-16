@@ -1,0 +1,80 @@
+$arabic-font-size: (
+    "1": "22px",
+    "2": "28px",
+    "3": "32px",
+    "4": "38px",
+    "5": "42px",
+    "6": "45px",
+    "7": "48px",
+    "8": "50px",
+    "9": "52px",
+    "10": "54px",
+);
+
+@font-face {
+    font-family: "Uthmanic Hafs";
+    src:
+        url("/assets/fonts/uthmanic_hafs/UthmanicHafs1Ver18.ttf") format("truetype"),
+        url("/assets/fonts/uthmanic_hafs/UthmanicHafs1Ver18.woff2") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nastaleeq";
+    src:
+        url("/assets/fonts/nastaleeq_indopak/indopak-nastaleeq-waqf-lazim-v4.2.1.ttf") format("truetype"),
+        url("/assets/fonts/nastaleeq_indopak/indopak-nastaleeq-waqf-lazim-v4.2.1.woff") format("woff"),
+        url("/assets/fonts/nastaleeq_indopak/indopak-nastaleeq-waqf-lazim-v4.2.1.woff2") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Al Qalam Quran";
+    src: url("/assets/fonts/alqalam/alqalam.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Me Quran";
+    src:
+        url("/assets/fonts/me_quran/me_quran.woff2") format("woff"),
+        url("/assets/fonts/me_quran/me_quran.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.font-uthmanic {
+    font-family: "Uthmanic Hafs" !important;
+}
+.font-nastaleeq {
+    font-family: "Nastaleeq" !important;
+}
+.font-alqalam {
+    font-family: "Al Qalam Quran" !important;
+}
+.font-me-quran {
+    font-family: "Me Quran" !important;
+}
+
+html[arabic-font=uthmanic] .font-arabic-auto {
+    @extend .font-uthmanic;
+}
+html[arabic-font=nastaleeq] .font-arabic-auto {
+    @extend .font-nastaleeq;
+}
+html[arabic-font=alqalam] .font-arabic-auto {
+    @extend .font-alqalam;
+}
+html[arabic-font=me-quran] .font-arabic-auto {
+    @extend .font-me-quran;
+}
+
+@each $size, $value in $arabic-font-size {
+    html[arabic-font-size="#{$size}"] .fs-arabic-auto {
+        font-size: #{$value} !important;
+    }
+}

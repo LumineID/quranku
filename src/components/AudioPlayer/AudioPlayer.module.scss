@@ -1,0 +1,70 @@
+.transition_5s {
+    transition: all 0.5s ease-in-out;
+}
+.transition_time_enter {
+    transition: all .3s ease;
+}
+.transition_time_leave {
+    transition-delay: 0s;
+    transform: translateY(2px);
+}
+.transition_time_from_to {
+    transform: translateY(-10px);
+    opacity: 0;
+}
+.playback_container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 90;
+}
+.playback_wrapper {
+    position: relative;
+}
+.playback_card {
+    position: absolute;
+    width: 100%;
+    background-color: $white;
+    z-index: 999;
+    bottom: 0;
+    border-top: 3px solid $primary;
+}
+.playback_header {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+}
+.playback_visible_button {
+    position: absolute;
+    top: -6.5px;
+    right: 15px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    background-color: $white;
+    border: 3px solid $primary;
+    border-bottom: none;
+}
+.playback_visible_button_icon {
+    font-size: 20px;
+    top: -5px;
+    position: relative;
+    color: $primary;
+}
+.playback_controller {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+html[data-bs-theme=dark] {
+    .playback_card,
+    .playback_visible_button {
+        background-color: $dark;
+    }
+}

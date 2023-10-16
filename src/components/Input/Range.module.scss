@@ -1,0 +1,39 @@
+.range_container {
+    position: relative;
+}
+.custom_range::before {
+    background-color: $primary;
+    width: var(--form-range-before-width);
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+    height: 0.5rem;
+    border-radius: 1rem;
+    top: 8px;
+    z-index: 5;
+    content: "";
+}
+.custom_range::after {
+    background-color: rgba($primary, .2);
+    width: var(--form-range-after-width);
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+    height: 0.5rem;
+    border-radius: 1rem;
+    top: 8px;
+    z-index: 4;
+    content: "";
+}
+.custom_range:disabled::before {
+    background-color: rgba($primary, .2);
+    cursor: not-allowed;
+}
+.custom_range:disabled::after {
+    background-color: rgba($primary, .1);
+    cursor: not-allowed;
+}
+.custom_range::-webkit-slider-thumb {
+    z-index: 10;
+    position: relative;
+}

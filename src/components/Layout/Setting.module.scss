@@ -1,0 +1,97 @@
+@import "./Animate.scss";
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2030;
+    transition: all .1s ease-in-out;
+
+    &.blur {
+        background-color: rgba($black, .3);
+        backdrop-filter: blur(5px);
+        transition: all .2s ease-in-out;
+    }
+}
+
+.card_container {
+    position: fixed;
+    z-index: 3040 !important;
+    width: 100%;
+    height: 100%;
+}
+
+.card_header {
+    background-color: transparent !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.card {
+    position: fixed !important;
+    border: 0px !important;
+    box-shadow: $box-shadow-sm !important;
+}
+
+.card_body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.text_bismillah {
+    background-color: $gray-100;
+    padding: 1.9rem;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    text-align: justify;
+    direction: rtl;
+}
+
+@media screen and (min-width: map-get($container-max-widths, md)) {
+    .card {
+        right: 0 !important;
+        width: 450px !important;
+        border-radius: 0px !important;
+        height: 100% !important;
+    }
+
+    .animate_in {
+        animation: fadeInRight .4s ease-in-out !important;
+    }
+
+    .animate_out {
+        animation: fadeOutRight 1s ease-in-out !important;
+    }
+}
+
+@media screen and (max-width: map-get($container-max-widths, md)) {
+    .card {
+        bottom: 0 !important;
+        width: 100% !important;
+        border-top-left-radius: 1.2rem !important;
+        border-top-right-radius: 1.2rem !important;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+    .card_body {
+        height: 600px;
+        max-height: 600px;
+    }
+
+    .animate_in {
+        animation: fadeInUp .4s ease-in-out !important;
+    }
+
+    .animate_out {
+        animation: fadeOutDown 1s ease-in-out !important;
+    }
+}
+
+html[data-bs-theme=dark] {
+    .text_bismillah {
+        background-color: $body-secondary-bg-dark;
+    }
+}

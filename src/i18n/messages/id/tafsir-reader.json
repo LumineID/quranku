@@ -1,0 +1,7 @@
+{
+    "next-ayah": "Ayat Selanjutnya",
+    "prev-ayah": "Ayat Sebelumnya",
+    "reading-group": "Anda sedang membaca tafsir untuk sekelompok ayat dari {from} hingga {to}",
+    "tafsir-unavailable": "{tafsir} tidak tersedia untuk ayat ini.",
+    "tafsir-not-found": "Tafsir tidak Tersedia."
+}

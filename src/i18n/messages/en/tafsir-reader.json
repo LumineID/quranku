@@ -1,0 +1,7 @@
+{
+    "next-ayah": "Next Ayah",
+    "prev-ayah": "Previous Ayah",
+    "reading-group": "You are reading a tafsir for the group of verses {from} to {to}",
+    "tafsir-unavailable": "{tafsir} is not available for the current ayah.",
+    "tafsir-not-found": "Tafsir not Found."
+}

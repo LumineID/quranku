@@ -1,0 +1,73 @@
+@import "./Animate.scss";
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: all .1s ease-in-out;
+}
+
+.list_items {
+    height: 100vh;
+    padding-bottom: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .item {
+        border-radius: 0.25rem;
+        transition: all .2s ease-in-out;
+    }
+}
+
+.card_container {
+    position: fixed;
+    z-index: 3040 !important;
+    width: 100%;
+    height: 100%;
+}
+
+.card_header {
+    background-color: transparent !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.card_body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.animate_in {
+    animation: fadeInRight .4s ease-in-out !important;
+}
+
+.animate_out {
+    animation: fadeOutRight 1s ease-in-out !important;
+}
+
+.card {
+    top: 120px;
+    border-radius: 0px;
+    width: 450px;
+    height: 100%;
+    position: fixed;
+    border: 0px;
+    box-shadow: $box-shadow-sm;
+    width: 350px;
+    right: 0;
+}
+
+@media screen and (max-width: map-get($container-max-widths, md)) {
+    .card {
+        width: 280px !important;
+    }
+}
+
+
+body[data-navbar-minimize=true] {
+    .card {
+        top: 65px;
+    }
+}

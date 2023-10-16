@@ -1,0 +1,31 @@
+{
+    "play-btn": "Putar Audio",
+    "pause-btn": "Jeda Audio",
+    "play": "Putar",
+    "pause": "Jeda",
+    "resume-playing-dialog": "Lanjutkan pemutaran Audio untuk surat {name}. {time} - {duration}",
+    "playback-options": {
+        "close-audio": "Tutup Pemutaran Audio",
+        "setting": {
+            "label": "Pengaturan",
+            "title": "Pengaturan",
+            "scroll": "Otomatis scroll",
+            "tooltip": "Tampilkan Tooltip Terjemahan saat penyorotan kata"
+        },
+        "reciter": {
+            "label": "Qari",
+            "title": "Pilih Qari"
+        },
+        "download": {
+            "label": "Unduh Audio",
+            "title": "Pilih Mode Unduhan",
+            "auto": "Unduhan Otomatis",
+            "manual": "Unduhan Manual",
+            "cancel": "Batalkan Unduhan"
+        },
+        "speed": {
+            "label": "Kecepatan",
+            "title": "Kecepatan Pemutaran"
+        }
+    }
+}

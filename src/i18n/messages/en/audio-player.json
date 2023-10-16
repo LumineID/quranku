@@ -1,0 +1,31 @@
+{
+    "play-btn": "Play Audio",
+    "pause-btn": "Pause Audio",
+    "play": "Play",
+    "pause": "Pause",
+    "resume-playing-dialog": "Resume Audio playback for surah {name}. {time} - {duration}",
+    "playback-options": {
+        "close-audio": "Close Audio Player",
+        "setting": {
+            "label": "Setting",
+            "title": "Setting",
+            "scroll": "Auto scroll",
+            "tooltip": "Show Translation Tooltips when highlighting words"
+        },
+        "reciter": {
+            "label": "Reciter",
+            "title": "Select Reciter"
+        },
+        "download": {
+            "label": "Download Audio",
+            "title": "Select Download Mode",
+            "auto": "Auto Download",
+            "manual": "Manual Download",
+            "cancel": "Cancel Downloading"
+        },
+        "speed": {
+            "label": "Speed",
+            "title": "Playback Speed"
+        }
+    }
+}
