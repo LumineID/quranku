@@ -31,7 +31,7 @@
 ## 💻 Instalasi
 ```sh
 git clone https://github.com/LumineID/quranku
-cd quran
+cd quranku
 yarn
 
 # development
