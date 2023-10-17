@@ -52,5 +52,5 @@ useLocalStorage().load().then(() => {
         .use(directives)
         .use(Vue3Toastify, toastifyOptions)
         .use(VueGtag, gtagOptions, routes)
-        .mount("body")
+        .mount("#app")
 })
