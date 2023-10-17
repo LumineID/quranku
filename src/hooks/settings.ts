@@ -73,7 +73,7 @@ export const config: Config = {
         locale: "id",
         theme: "auto",
         font_size: 3,
-        font_type: "uthmanic",
+        font_type: "nastaleeq",
         scale: 1,
         transliteration: false,
         translation: true,

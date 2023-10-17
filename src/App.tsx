@@ -4,7 +4,6 @@ import setPageTitle from "./helpers/set-page-title";
 import LoaderBook from "./components/PageLoader/Book";
 import LoaderProgress from "./components/PageLoader/Progress";
 import AudioPlayer from "./components/AudioPlayer/AudioPlayer";
-import AlertDialog from "./components/AlertDialog/AlertDialog";
 
 export default defineComponent({
     setup() {
@@ -20,7 +19,6 @@ export default defineComponent({
                 <LoaderProgress visible={this.$state.get("LOADING_PAGE") === "progress"} />
                 <LoaderBook visible={this.$state.get("LOADING_PAGE") === "book"} />
                 <AudioPlayer />
-                <AlertDialog />
                 <RouterView />
             </>
         )
