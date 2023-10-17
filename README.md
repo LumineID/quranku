@@ -17,7 +17,7 @@
 - Putar Audio Surah
 - Tafsirs
 - Info Surah
-- Jadwan Sholat (belum tersedia)
+- Jadwal Sholat (belum tersedia)
 
 ## 📸 Tangkapan Layar
 - ![list surah](/screenshot/list-surah.png)

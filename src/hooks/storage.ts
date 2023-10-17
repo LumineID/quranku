@@ -1,5 +1,5 @@
 import md5 from "js-md5";
-import { createGlobalState } from "@vueuse/core";
+import { createGlobalState, useDebounceFn } from "@vueuse/core";
 import { ref, readonly, DeepReadonly } from "vue";
 import type { Ref } from "vue";
 
@@ -15,7 +15,7 @@ export interface UseLocalStorage {
     load: () => Promise<Record<string, any>>
 }
 
-function setSignature(data: Record<string, any>) {
+const setSignature = useDebounceFn((data: Record<string, any>) => {
     const signatures = [];
     for (const key of Object.keys(data)) {
         signatures.push(key);
@@ -29,7 +29,7 @@ function setSignature(data: Record<string, any>) {
     const signature = md5.create().update(`${SIGNATURE_KEY}[${signatures.join(':')}]`).hex();
 
     localStorage.setItem(STORAGE_SIGNATURE_NAME, signature);
-}
+}, 100)
 
 export const useLocalStorage = createGlobalState<() => UseLocalStorage>((): UseLocalStorage => {
     const state = ref<Record<string, any>>({});

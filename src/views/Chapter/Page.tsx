@@ -132,7 +132,7 @@ export default defineComponent({
 
         function scroll(offset: number): Promise<void> {
             return new Promise(resolve => {
-                offset = offset - ((document.querySelector("nav.navbar") as HTMLElement)?.offsetHeight || 0) - 30;
+                offset = offset - ((document.querySelector("nav.navbar") as HTMLElement)?.offsetHeight || 0) + 80;
     
                 setTimeout(() => {
                     window.scrollTo(0, offset);

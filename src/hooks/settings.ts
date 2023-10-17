@@ -5,6 +5,7 @@ import { updateGlobalOptions } from "vue3-toastify";
 import { useLocalStorage } from "./storage";
 import { useAlert } from "../lib/alert";
 import { LocaleCode } from "@/types";
+import copy from "@/helpers/copy";
 
 export type Locale = "en" | "id";
 export type FontType = "nastaleeq" | "uthmanic" | "me-quran" | "alqalam";
@@ -246,8 +247,8 @@ export const useSettings = createGlobalState((): UseSettings => {
         scale.value = config.DEFAULT_SETTINGS.scale;
         transliteration.value = config.DEFAULT_SETTINGS.transliteration;
         translation.value = config.DEFAULT_SETTINGS.translation;
-        transliterationDisplay.value = config.DEFAULT_SETTINGS.transliteration_display;
-        translationDisplay.value = config.DEFAULT_SETTINGS.translation_display;
+        transliterationDisplay.value = copy(config.DEFAULT_SETTINGS.transliteration_display);
+        translationDisplay.value = copy(config.DEFAULT_SETTINGS.translation_display);
     }
 
     return {
